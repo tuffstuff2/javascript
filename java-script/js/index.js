@@ -2681,13 +2681,38 @@
 
 // console.log(track);
 
+// let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let total = 0;
 
-let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let total = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     total += numbers[i];
+// }
 
-for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i];
-}
+// console.log(total);
 
-console.log(total);
+// let students = ["Farxod", "Azim", "Davlat", "Jasur", "Daler", "Doni"];
 
+// let even = [];
+// let odd = [];
+// let gl = "AOUEIY";
+
+// students.forEach((std) => {
+//   if (gl.includes(std[0])) {
+//     even.push(std);
+//   } else {
+//     odd.push(std);
+//   }
+// });
+
+// console.log(even);
+// console.log(odd);
+
+let students = ["Farxod", "Azim", "Davlat", "Jasur", "Daler", "doni"];
+let longestName = students.sort((a, b) => b.length - a.length)[0];
+
+console.log(longestName);
+
+let numbers = [1, 16, 4, 31, 11, 8, 28, 2, 3, 6, 4, 7, 5];
+let largestNumber = numbers.sort((a, b) => b - a)[0];
+
+console.log(largestNumber);
