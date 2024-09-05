@@ -2707,12 +2707,125 @@
 // console.log(even);
 // console.log(odd);
 
-let students = ["Farxod", "Azim", "Davlat", "Jasur", "Daler", "doni"];
-let longestName = students.sort((a, b) => b.length - a.length)[0];
+// let students = ["Farxod", "Azim", "Davlat", "Jasur", "Daler", "doni"];
+// let longestName = students.sort((a, b) => b.length - a.length)[0];
 
-console.log(longestName);
+// console.log(longestName);
 
-let numbers = [1, 16, 4, 31, 11, 8, 28, 2, 3, 6, 4, 7, 5];
-let largestNumber = numbers.sort((a, b) => b - a)[0];
+// let numbers = [1, 16, 4, 31, 11, 8, 28, 2, 3, 6, 4, 7, 5];
+// let largestNumber = numbers.sort((a, b) => b - a)[0];
 
-console.log(largestNumber);
+// console.log(largestNumber);
+
+// let arr = ['hello', 1, 0, false, true,'',null,99,[],{},NaN]
+// let arr2 = []
+
+// arr.filter((alem) => {
+// if(alem){
+//     arr2.push(alem)
+// }
+// })
+// console.log(arr2);
+
+// const users = [
+//   {
+//     name: "Davlat",
+//     age: 17,
+//     isMarried: true,
+//     wifes: ["malika", "kamila", "samir", "miron"],
+//   },
+//   {
+//     name: "Samir",
+//     age: 13,
+//     isMarried: false,
+//     wifes: [],
+//   },
+//   {
+//     name: "Jasur",
+//     age: 17,
+//     isMarried: false,
+//     wifes: [],
+//   },
+//   {
+//     name: "Islom",
+//     age: 16,
+//     isMarried: true,
+//     wifes: ["Davlat"],
+//   },
+// ];
+
+// let max = 0;
+// let min = users[0].age;
+// let ever = 0;
+
+// users.forEach((user) => {
+//   if (user.age > max) {
+//     max = user.age;
+//   }
+//   if (user.age < min) {
+//     min = user.age;
+//   }
+//   ever += user.age;
+// });
+// console.log(max);
+// console.log(min);
+// console.log((ever /= users.length));
+
+const cars = [
+  {
+    model: "malibu",
+    mark: "gm",
+    price: 22000,
+    year: 2018,
+    mileage: 64000,
+    horsePower: 212,
+  },
+  {
+    model: "cobalt",
+    mark: "gm",
+    price: 11000,
+    year: 2023,
+    mileage: 4000,
+    horsePower: 190,
+  },
+  {
+    model: "cls-63",
+    mark: "mercedes-benz",
+    price: 64000,
+    year: 2010,
+    mileage: 120000,
+    horsePower: 450,
+  },
+  {
+    model: "competition",
+    mark: "BMW",
+    price: 120000,
+    year: 2020,
+    mileage: 20000,
+    horsePower: 520,
+  },
+  {
+    model: "k5",
+    mark: "kia",
+    price: 32000,
+    year: 2024,
+    mileage: 1000,
+    horsePower: 240,
+  },
+];
+let faster = cars[0];
+let mil = cars[0];
+let young = cars[0];
+cars.forEach((care) => {
+  if (care.horsePower > faster.horsePower) {
+    faster = care;
+  }
+  if (care.mileage > mil.mileage) {
+    mil = care;
+  }
+  if (care.year > young.year) {
+    young = care;
+  }
+});
+
+console.log(faster, mil, young);
