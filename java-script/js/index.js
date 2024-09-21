@@ -3151,71 +3151,99 @@
 // // }
 // // console.log(newcars);
 
-let ask;
-let pop = 4;
-do {
-  ask = +prompt(`Введите пароль у тебя есть ${pop} попытки`);
-  pop--;
-} while (ask != 1111 && pop > 0);
+// let ask;
+// let pop = 4;
+// do {
+//   ask = +prompt(`Введите пароль у тебя есть ${pop} попытки`);
+//   pop--;
+// } while (ask != 1111 && pop > 0);
 
-let users = [
-  {
-    id: 1,
-    name: "Samir",
-    tax: 12,
-    budget: 400,
-    expenses: [100, 120, 170],
-  },
-  {
-    id: 2,
-    name: "Safina",
-    tax: 9,
-    budget: 1700,
-    expenses: [300, 200, 600],
-  },
-  {
-    id: 3,
-    name: "Leyla",
-    tax: 9,
-    budget: 1500,
-    expenses: [180, 240, 500],
-  },
-  {
-    id: 4,
-    name: "Azim",
-    tax: 12,
-    budget: 180,
-    expenses: [40, 30, 10],
-  },
-];
+// let users = [
+//   {
+//     id: 1,
+//     name: "Samir",
+//     tax: 12,
+//     budget: 400,
+//     expenses: [100, 120, 170],
+//   },
+//   {
+//     id: 2,
+//     name: "Safina",
+//     tax: 9,
+//     budget: 1700,
+//     expenses: [300, 200, 600],
+//   },
+//   {
+//     id: 3,
+//     name: "Leyla",
+//     tax: 9,
+//     budget: 1500,
+//     expenses: [180, 240, 500],
+//   },
+//   {
+//     id: 4,
+//     name: "Azim",
+//     tax: 12,
+//     budget: 180,
+//     expenses: [40, 30, 10],
+//   },
+// ];
 
-let successfull = [];
-let unsuccessfull = [];
-let rich = 0;
-let poor = users[0].budget
-for (let user of users) {
-  let totalEx = 0;
-  let TaxSum = (user.tax / 100) * user.budget;
-  totalEx += TaxSum;
+// let successfull = [];
+// let unsuccessfull = [];
+// let rich = 0;
+// let poor = users[0].budget
+// for (let user of users) {
+//   let totalEx = 0;
+//   let TaxSum = (user.tax / 100) * user.budget;
+//   totalEx += TaxSum;
 
-  for (let expense of user.expenses) {
-    totalEx += expense;
+//   for (let expense of user.expenses) {
+//     totalEx += expense;
+//   }
+
+//   if (totalEx > user.budget) {
+//     unsuccessfull.push(user);
+//   } else {
+//     successfull.push(user);
+//   }
+
+//   if (user.budget - totalEx > rich) {
+//     rich = user;
+//   }
+//   if (user.budget - totalEx < poor) {
+//     poor = user;
+//   }
+//   console.log(totalEx);
+
+// }
+// console.log(rich, poor);
+
+// const userOne = {
+//   age: 29,
+// };
+
+// const userTwo = {
+//   age: 17,
+// };
+
+// function Adult(user) {
+//   return user.age >= 18;
+// }
+// console.log(Adult(userOne), Adult(userTwo));
+
+
+function longest_name(n1, n2, n3) {
+  let names = [n1, n2, n3];
+  let longest = names[0];
+
+  for (let i = 1; i < names.length; i++) {
+    if (names[i].length > longest.length) {
+      longest = names[i];
+    }
   }
 
-  if (totalEx > user.budget) {
-    unsuccessfull.push(user);
-  } else {
-    successfull.push(user);
-  }
-
-  
-  if (user.budget - totalEx > rich) {
-    rich = user;
-  }
-  if (user.budget - totalEx < poor) {
-    poor = user;
-  }
-  console.log(totalEx);
-  
+  return longest;
 }
-console.log(rich, poor);
+
+console.log(longest_name('Azim','Alisher','Abdulaziz'));
