@@ -3232,18 +3232,85 @@
 // }
 // console.log(Adult(userOne), Adult(userTwo));
 
+// function longest_name(...names) {
+//   let longest = names[0];
 
-function longest_name(n1, n2, n3) {
-  let names = [n1, n2, n3];
-  let longest = names[0];
+//   for (let i = 1; i < names.length; i++) {
+//     if (names[i].length > longest.length) {
+//       longest = names[i];
+//     }
+//   }
 
-  for (let i = 1; i < names.length; i++) {
-    if (names[i].length > longest.length) {
-      longest = names[i];
+//   return longest;
+// }
+
+// console.log(longest_name('Azim','Alisher','Abdulaziz',));
+
+// function fizz_buzz(...params) {
+//   return params.map((num) => {
+//     if (num % 3 === 0 && num % 5 === 0) {
+//       return "FizzBuzz";
+//     } else if (num % 3 === 0) {
+//       return "Fizz";
+//     } else if (num % 5 === 0) {
+//       return "Buzz";
+//     } else {
+//       return num;
+//     }
+//   });
+// }
+
+// console.log(fizz_buzz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
+
+// function polindrom(x) {
+//   let str = x.toString();
+//   let reverse = str.split("").reverse().join("");
+//   return str == reverse;
+// }
+
+// console.log(polindrom(121));
+
+
+function RomeNumb(x) {
+  const Numerals = [
+    { value: 1000, numeral: 'M' },
+    { value: 900, numeral: 'CM' },
+    { value: 500, numeral: 'D' },
+    { value: 400, numeral: 'CD' },
+    { value: 100, numeral: 'C' },
+    { value: 90, numeral: 'XC' },
+    { value: 50, numeral: 'L' },
+    { value: 40, numeral: 'XL' },
+    { value: 10, numeral: 'X' },
+    { value: 9, numeral: 'IX' },
+    { value: 5, numeral: 'V' },
+    { value: 4, numeral: 'IV' },
+    { value: 1, numeral: 'I' }
+  ];
+
+  let result = '';
+  for (let i = 0; i < Numerals.length; i++) {
+    if (x >= Numerals[i].value) {
+      result += Numerals[i].numeral;
+      x -= Numerals[i].value;
+      i--; 
     }
   }
-
-  return longest;
+  return result;
 }
 
-console.log(longest_name('Azim','Alisher','Abdulaziz'));
+console.log(RomeNumb(2000)); 
+
+let bubbleSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr.length - i - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+              [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; 
+          }
+      }
+  }
+  return arr;
+}
+
+const testData = [5, 3, 8, 4, 2];
+console.log(bubbleSort(testData));
